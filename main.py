@@ -18,8 +18,9 @@ import json
 
 class MainPage(webapp2.RequestHandler):
     def post(self):
-        self.response.headers['Content-Type'] = 'text/plain'
-        self.response.write(json.dumps({'text':'Hello World'}))
+        # Set headers
+        self.response.headers['Content-Type'] = 'application/json; charset=utf-8'
+        self.response.write(json.dumps({'text': "Hello World"}))
 
 
 app = webapp2.WSGIApplication([
