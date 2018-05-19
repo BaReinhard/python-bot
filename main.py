@@ -17,7 +17,7 @@ import json
 
 
 class MainPage(webapp2.RequestHandler):
-    def get(self):
+    def post(self):
         self.response.headers['Content-Type'] = 'text/plain'
         self.response.write(json.loads({'text':'Hello World'}))
 
